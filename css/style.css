@@ -80,18 +80,24 @@ body {
     transform: translateX(-50%);
     font-size: 100%;
     top: 5%; }
-  body .title {
+  body .title, body .play {
     position: absolute;
     text-align: center;
     top: 50%;
     left: 50%;
+    margin-top: 160px;
+    font-size: 130%;
     -webkit-transform: translate(-50%, -50%);
     -moz-transform: translate(-50%, -50%);
     -ms-transform: translate(-50%, -50%);
     -o-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%); }
-    body .title .storie {
+    body .title .storie, body .play .storie {
       font-family: gillbold; }
+  body .play {
+    margin-top: 0px; }
+    body .play img {
+      width: 80px; }
   body .link {
     position: absolute;
     top: 50%;
@@ -106,9 +112,9 @@ body {
       font-family: gillbold;
       font-size: 50%; }
     body .link .arrow {
-      padding-bottom: 20px; }
+      padding-bottom: 30px; }
       body .link .arrow img {
-        height: 30px; }
+        height: 18px; }
   body .leftlink {
     left: 5%; }
     body .leftlink .arrow img {
@@ -117,11 +123,10 @@ body {
       -ms-transform: scale(-1);
       -o-transform: scale(-1);
       transform: scale(-1); }
-    body .leftlink .name, body .leftlink .storie {
-      text-align: right; }
   body .rightlink {
     right: 5%; }
     body .rightlink .arrow {
       text-align: right;
-      margin-left: auto;
-      margin-right: 0; }
+      margin-left: auto; }
+    body .rightlink .name, body .rightlink .storie {
+      text-align: right; }

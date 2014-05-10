@@ -78,12 +78,21 @@ body{
     text-align: center;
     top: 50%;
     left: 50%;
+    margin-top: 160px;
+    font-size: 130%;
     @include transform( translate(-50%,-50%));
     .storie {
        font-family: gillbold;
     }
   }
 
+  .play{
+    @extend .title;
+    margin-top: 0px;
+    img{
+      width: 80px;
+    }
+  }
 
   .link{
     position: absolute;
@@ -98,9 +107,10 @@ body{
     }
     .arrow {
       img{
-        height: 30px;
+        height: 18px;
+
       }
-      padding-bottom: 20px;
+      padding-bottom: 30px;
     }
   }
 
@@ -108,9 +118,10 @@ body{
     left: 5%;
     .arrow img {
       @include transform( scale(-1));
+
     }
     .name,.storie {
-      text-align: right;
+     // text-align: right;
     }
 
   }
@@ -119,8 +130,9 @@ body{
     .arrow{
       text-align: right;
       margin-left:auto;
-      margin-right:0;
-
+    }
+    .name,.storie {
+      text-align: right;
     }
   }
 
