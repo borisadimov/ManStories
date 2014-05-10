@@ -58,37 +58,76 @@ body{
     color: #fff;
     text-transform: uppercase;
   }
-  .gill{
-    font-family: gillbold;
-  }
-  .arrow{
-    font-family: sans-serif;
-    @include transform(scaleX(2) translateX(20%));
-    display: inline-block;
-  }
+
+
   .black {
     background: rgba(0,0,0,0.36);
     @include transition (background 0.7s ease-in-out);
   }
+
+  .logo{
+    position: absolute;
+    left: 50%;
+    @include transform( translateX(-50%));
+    font-size: 100%;
+    top: 5%;
+  }
+
+  .title {
+    position: absolute;
+    text-align: center;
+    top: 50%;
+    left: 50%;
+    @include transform( translate(-50%,-50%));
+    .storie {
+       font-family: gillbold;
+    }
+  }
+
+
   .link{
     position: absolute;
+    top: 50%;
+    @include transform( translateY(-50%));
+    .name {
+      font-size: 80%
+    }
+    .storie{
+      font-family: gillbold;
+      font-size: 50%;
+    }
+    .arrow {
+      img{
+        height: 30px;
+      }
+      padding-bottom: 20px;
+    }
   }
-  .title {
-    font-family: gillbold;
-  }
-  .logo{
-  position: absolute;
-  left: 50%;
-  margin-left: -4%;
-  font-size: 100%;
-  top: 5%;
-  }
+
   .leftlink{
     left: 5%;
+    .arrow img {
+      @include transform( scale(-1));
+    }
+    .name,.storie {
+      text-align: right;
+    }
+
   }
   .rightlink{
     right: 5%;
+    .arrow{
+      text-align: right;
+      margin-left:auto;
+      margin-right:0;
+
+    }
   }
+
+
+
+
+
 }
 
 

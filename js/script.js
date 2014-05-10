@@ -2,6 +2,16 @@
 (function() {
   var BV, delay, fontsize, wHeight, wWidth, x, y;
 
+  x = 0;
+
+  y = 0;
+
+  BV = 0;
+
+  delay = function(ms, func) {
+    return setTimeout(func, ms);
+  };
+
   window.myvideo = new $.BigVideo();
 
   BV = window.myvideo;
@@ -16,17 +26,9 @@
 
   wWidth = $(window).width();
 
-  fontsize = wWidth / 560 * 100;
+  fontsize = wWidth / 560 * 0.7 * 100;
 
   $("body").css("font-size", fontsize + "%");
-
-  x = 0;
-
-  y = 0;
-
-  delay = function(ms, func) {
-    return setTimeout(func, ms);
-  };
 
   $(window).resize(function() {
     var у;
@@ -35,12 +37,11 @@
       wHeight = $(window).height();
       $(".black").css("height", wHeight + "px");
       wWidth = $(window).width();
-      fontsize = wWidth / 560 * 100;
+      fontsize = wWidth / 560 * 0.7 * 100;
       return $("body").css("font-size", fontsize + "%");
     }, 180);
     return у = setTimeout(function() {
-      window.myvideo.RESIZE();
-      return console.log("rrrresize");
+      return window.myvideo.RESIZE();
     }, 220);
   });
 
